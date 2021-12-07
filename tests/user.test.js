@@ -19,4 +19,14 @@ describe('Test : cannot get one user', function(){
         .expect('Content-Type', /json/)
         .expect(404, done);
     })
-})
+});
+
+describe('Test : get one user', function(){
+    it('responds with json', function(done){
+        request(app)
+        .get('/api/users/1')
+        .set('Accept', 'application/json')
+        .expect('Content-Type', /json/)
+        .expect(200, done);
+    })
+});

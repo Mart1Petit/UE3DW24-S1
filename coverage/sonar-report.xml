@@ -1,9 +1,9 @@
 <testExecutions version="1">
 <file path="tests/user.test.js">
-<testCase name="Test : Get all users responds with json" duration="191" />
-<testCase name="Test : cannot get one user responds with json" duration="11">
-<failure message="Error"><![CDATA[Error: expected &quot;Content-Type&quot; matching /json/, got &quot;text/html; charset=utf-8&quot;
-    at Object.&lt;anonymous&gt; (/home/vagrant/UE3DW24_S1/tests/user.test.js:19:10)
+<testCase name="Test : Get all users responds with json" duration="154" />
+<testCase name="Test : cannot get one user responds with json" duration="18">
+<failure message="Error"><![CDATA[Error: expected 404 &quot;Not Found&quot;, got 200 &quot;OK&quot;
+    at Object.&lt;anonymous&gt; (/home/vagrant/UE3DW24_S1/tests/user.test.js:20:10)
     at Promise.then.completed (/home/vagrant/UE3DW24_S1/node_modules/jest-circus/build/utils.js:380:26)
     at new Promise (&lt;anonymous&gt;)
     at callAsyncCircusFn (/home/vagrant/UE3DW24_S1/node_modules/jest-circus/build/utils.js:315:10)
@@ -12,7 +12,7 @@
     at _runTest (/home/vagrant/UE3DW24_S1/node_modules/jest-circus/build/run.js:155:3)
     at _runTestsForDescribeBlock (/home/vagrant/UE3DW24_S1/node_modules/jest-circus/build/run.js:66:9)
 ----
-    at Test.Object.&lt;anonymous&gt;.Test._assertHeader (/home/vagrant/UE3DW24_S1/node_modules/supertest/lib/test.js:281:14)
+    at Test.Object.&lt;anonymous&gt;.Test._assertStatus (/home/vagrant/UE3DW24_S1/node_modules/supertest/lib/test.js:304:12)
     at /home/vagrant/UE3DW24_S1/node_modules/supertest/lib/test.js:80:15
     at Test.Object.&lt;anonymous&gt;.Test._assertFunction (/home/vagrant/UE3DW24_S1/node_modules/supertest/lib/test.js:338:11)
     at Test.Object.&lt;anonymous&gt;.Test.assert (/home/vagrant/UE3DW24_S1/node_modules/supertest/lib/test.js:209:21)
@@ -22,5 +22,6 @@
     at emitCloseNT (net.js:1677:8)
     at processTicksAndRejections (internal/process/task_queues.js:81:21)]]></failure>
 </testCase>
+<testCase name="Test : get one user responds with json" duration="11" />
 </file>
 </testExecutions>
