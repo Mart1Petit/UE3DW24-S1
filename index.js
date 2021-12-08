@@ -1,9 +1,11 @@
 const dotenv = require('dotenv').config();
 const express = require('express');
+const bodyParser = require('body-parser');
 const app = express();
 const port = process.env.PORT;
 const apiRouter = require('./routes/apiRouter').router;
 
+app.use(bodyParser.json());
 app.use('/api/', apiRouter);
 
 app.listen(port, () => {

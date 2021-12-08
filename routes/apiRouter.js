@@ -5,5 +5,8 @@ exports.router = (function() {
     const apiRouter = express.Router();
     apiRouter.route('/users').get(usersCtrl.getAllUsers);
     apiRouter.route('/users/:id/').get(usersCtrl.getOneUser);
+    apiRouter.route('/createuser/').post(usersCtrl.createUser);
+    apiRouter.route('/updateuser/').put(usersCtrl.updateUser);
+    apiRouter.route('/deleteuser/').delete(usersCtrl.deleteUser);
     return apiRouter;
 })();
